@@ -1,1 +1,70 @@
-Coming Soon...
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>This world is ending — Scrzox</title>
+  <meta name="description" content="Scrzox music discovery archive">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="topline"></div>
+    <div class="header-inner">
+      <div>
+        <div class="eyebrow">Scovery Project</div>
+        <h1>Scovery26</h1>
+        <p class="subtitle">An archive of discoveries, remixes, experiments and unreleased music.</p>
+      </div>
+      <a class="archive-link" href="https://archive.org/download/scovery" target="_blank" rel="noopener">OPEN ARCHIVE ↗</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="intro">
+      <div>
+        <span class="label">COLLECTION</span>
+        <h2>Music archive</h2>
+      </div>
+      <div class="stats">
+        <strong id="folderCount">—</strong>
+        <span>folders</span>
+      </div>
+    </section>
+
+    <div id="status" class="status">Reading the archive index…</div>
+    <section id="folders" class="folder-grid" aria-live="polite"></section>
+  </main>
+
+  <div id="drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-backdrop" data-close></div>
+    <aside class="drawer-panel" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <button class="close" data-close aria-label="Close">×</button>
+      <div class="eyebrow">DIRECTORY</div>
+      <h2 id="drawerTitle">Loading…</h2>
+      <div id="drawerMeta" class="drawer-meta"></div>
+
+      <div class="player-panel">
+        <div class="player-art-wrap">
+          <img id="trackArt" alt="Album cover or spectrogram" hidden>
+        </div>
+        <div class="player-body">
+          <div id="playerMeta" class="player-meta">Play a track to load the spectrogram or cover art.</div>
+          <audio id="audioPlayer" controls preload="metadata"></audio>
+        </div>
+      </div>
+
+      <div class="webamp-actions">
+        <button id="openWebamp" class="webamp-toggle" type="button">OPEN WEBAMP</button>
+      </div>
+      <div id="webampContainer" class="webamp-container" aria-live="polite"></div>
+
+      <div id="tracks" class="tracks"></div>
+      <a id="openFolder" class="open-folder" target="_blank" rel="noopener">OPEN ON INTERNET ARCHIVE ↗</a>
+    </aside>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/webamp@1.4.2/dist/webamp.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
